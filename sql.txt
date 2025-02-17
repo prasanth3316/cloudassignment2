@@ -1,0 +1,15 @@
+CREATE TABLE users (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    username TEXT NOT NULL,
+    password TEXT NOT NULL,
+    email TEXT NOT NULL,
+    firstname TEXT NOT NULL,
+    lastname TEXT NOT NULL
+);
+
+# alter table for extra credit
+ALTER TABLE users ADD COLUMN filename TEXT;
+ALTER TABLE users ADD COLUMN word_count INTEGER;
+
+#test
+INSERT INTO users (username, password, email,firstname,lastname) VALUES ('testuser', 'password123', 'testuser@example.com’,’test’,’user’);
